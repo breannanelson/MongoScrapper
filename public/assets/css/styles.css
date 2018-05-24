@@ -1,3 +1,25 @@
 body {
   display: inherit
 }
+
+.heading {
+  background: url(./images/news-paper.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+
+#articleBTN {
+  background-color: rgb(129, 129, 211);
+}
+
+#articleBTNWidth {
+ width: 20px;
+}
+
+#articleDiv {
+  background-color: white;
+  margin-bottom: 15px;
+}

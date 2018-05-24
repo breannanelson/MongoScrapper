@@ -1,9 +1,30 @@
-<div class="jumbotron">
-  <h1 class="display-3">Hello, world!</h1>
-  <p class="lead">This is an index entry point for an express application</p>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/" role="button">Home</a>
+  <a class="navbar-brand" href="/saved" role="button">Saved Articles</a>
+</nav>
+
+<div class="jumbotron heading">
+  <h1 class="display-3">New York Times</h1>
+  <p class="lead">Keeping you up-to-date with the most current news</p>
   <hr class="my-4">
-  <p>Replace this jumbotron with your own handlebars!</p>
+  <p>We are here for you</p>
   <p class="lead">
-    <a class="btn btn-primary btn-lg" href="/otherPage" role="button">Learn more</a>
   </p>
 </div>
+
+
+
+{{#each article}}
+<div id="articleBTN" class="rounded">
+  <div id="articleBTNWidth">
+    <button class="save-btn float-right value={{this._id}}>Save Article</button>
+  </div>
+  <div id="articleDiv">
+    <a href={{this.url}} target="_blank">{{this.headline}}</a>
+    <br> {{this.summary}}
+    <br>
+    <br>
+  </div>
+
+</div>
+{{/each}}
