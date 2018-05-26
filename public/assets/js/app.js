@@ -55,7 +55,7 @@ $(".note-btn").on("click", function () {
         else {
             $.get('/comment/' + data.comment).then(function (data, status) {
                 // console.log("data.body: ", data[0].body)
-                swal("Your commnet about this article:\n", data[0].body)
+                swal("Your commnet about this article:", data[0].body)
             })
         }
 

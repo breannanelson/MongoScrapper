@@ -1,4 +1,70 @@
-<div class="jumbotron">
+<div class="row">
+  <div class="col-md-12">
+    <nav id="navStyle" class="navbar navbar-expand-lg navbar-light">
+      <a id="navText" class="navbar-brand" href="/" role="button">Home</a>
+      <a id="navText" class="navbar-brand" href="/saved" role="button">Saved Articles</a>
+    </nav>
+
+    <div class="jumbotron heading">
+      <h1 class="display-3">Saved Articles</h1>
+      <p class="lead">Keeping you up-to-date with the most current news</p>
+      <hr class="my-4">
+      <p>We are here for you</p>
+      <p class="lead">
+      </p>
+    </div>
+  </div>
+</div>
+<div class="row" id="artContent">
+  <div class="col-md-1"></div>
+  <div class="col-md-10">
+    {{#each article}}
+    <div id="articleBTN" class="rounded">
+      <span id="articleBTNWidth">
+        <button class="btn unsave-btn" value={{this._id}}>Unsave Article</button>
+        <button class="btn note-btn" value={{this._id}}>Article Note</button>
+        <br>
+      </span>
+      <div id="articleDiv" class="rounded">
+        <a href={{this.url}} target="_blank">{{this.headline}}</a>
+        <br> {{this.summary}}
+        <br>
+        <br>
+
+      </div>
+
+    </div>
+    {{/each}}
+
+
+  </div>
+  <div class="col-md-1"></div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{{!-- <div class="jumbotron">
   <h1 class="display-3">Saved Articles</h1>
   <p class="lead">This is an index entry point for an express application</p>
   <hr class="my-4">
@@ -10,9 +76,12 @@
 
 {{#each article}}
 <div>
-<button class="unsave-btn" value={{this._id}}>Unsave Article</button>
-<button class="note-btn" value={{this._id}}>Article Note</button><br>
-<a href={{this.url}} target="_blank">{{this.headline}}</a><br>
-{{this.summary}}<br><br>
+  <button class="unsave-btn" value={{this._id}}>Unsave Article</button>
+  <button class="note-btn" value={{this._id}}>Article Note</button>
+  <br>
+  <a href={{this.url}} target="_blank">{{this.headline}}</a>
+  <br> {{this.summary}}
+  <br>
+  <br>
 </div>
-{{/each}}    
+{{/each}} --}}
